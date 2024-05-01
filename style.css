@@ -1,0 +1,142 @@
+*{
+    font-family: sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar{
+    width: 150px;
+    min-height: 100vh;
+    padding: 1px 10px;
+   border-right: 2px solid #D4D3DC;
+}
+
+.navbar p{
+    font-size: 35px;
+    margin-left: 10px;
+}
+
+.plus{
+    text-align: center;
+    margin-top: 70px;
+}
+
+#plus{
+    width: 50px;
+    cursor: pointer;
+}
+
+.colors{
+    width: max-content;
+    text-align: center;
+    margin-top: 50px;
+    display: none;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    row-gap: 10px;
+  
+}
+
+
+
+img{
+    width: 30px;
+    cursor: pointer;
+}
+
+
+.notes{
+    width: 100%;
+    min-height: 100vh;
+    padding: 1px 10px;
+    text-align: center;
+}
+
+.search{
+    margin-top: 30px;
+    width: 80%;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    padding-left: 50px;
+    font-size: 20px;
+}
+
+#searchicon {
+    margin-top: 43px;
+    margin-left: 10px;
+    position: absolute;
+}
+
+.notescontent{
+    margin-top: 70px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 32px;
+    row-gap: 50px;
+
+}
+
+.card{
+    
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    resize: none;
+    font-size: 17px;
+}
+
+
+.divcard{
+    width: max-content;
+    height: max-content;
+    display: flex;
+}
+.divcard .closeicon{
+    width: 20px;
+    height: 20px;
+    /*display: none;*/
+}
+
+
+/* Styles pour annuler la bordure lorsqu'elle est sélectionnée */
+textarea:focus {
+    outline: none; /* Supprime la bordure de sélection par défaut */
+}
+
+.deletediv{
+    margin-top: 40px;
+    margin-bottom: -10px;
+    width: 100%;
+    height: max-content;
+
+
+}
+
+#deleteAll{
+    width:50%; 
+    height: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+
+}
+
+#deleteAll:hover{
+    background-color: #DCDFDA;
+}
