@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <link rel="stylesheet" href="style_Notes_Page.css"/>
+</head>
+<body>
+    <div class="navbar">
+        <div class="app-name">
+            <p>Notes</p>
+        </div>
+        <div class="plus">
+            <img onclick="showcolors()" id='plus' class="grow-shrink" src="./images/icons8-plus-30.png" alt="plus"/> 
+            <div class="colors" id="colors">
+                <img src="./images/blue.png" alt="blue" onclick="AddCard('#27C7D4')"/>
+                <img src="./images/rouge.png" alt="rouge" onclick="AddCard('#D22727')"/>
+                <img src="./images/orange.png" alt="orange" onclick="AddCard('#f88f52')"/>
+                <img src="./images/yellow.png" alt="yellow" onclick="AddCard('#ffeb69')" />
+                <img src="./images/pink.png" alt="pink" onclick="AddCard('#FE94B4')"/>
+                <img src="./images/purpl.png" alt="purpl" onclick="AddCard('#c49fff')"/>
+                <img src="./images/green2.png" alt="green" onclick="AddCard('#e1fec5')"/>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="notes" id="notes">
+        <div class="divsearch" >
+            <img src="./images/search.png" alt="orange" id="searchicon"/>
+            <input class="search" id="search" type="text" placeholder="search" onkeyup="search(value)" />
+        </div>
+
+        <div class="deletediv" id="deletediv">
+        </div>
+    </div>
+   
+
+
+
+
+
+
+
+
+
+
+    <script src="index.js"></script>
+</body>
+</html>
