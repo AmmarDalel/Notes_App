@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notes App</title>
     <link rel="stylesheet" href="style_Notes_Page.css"/>
+    <link rel="icon"href="./images/logo.png">
+
 </head>
-<body>
+<body >
     <div class="navbar">
         <div class="app-name">
             <p>Notes</p>
         </div>
         <div class="plus">
-            <img onclick="showcolors()" id='plus' class="grow-shrink" src="./images/icons8-plus-30.png" alt="plus"/> 
+            <img id='plus' class="grow-shrink" src="./images/icons8-plus-30.png" alt="plus" onclick="showcolors()"/> 
             <div class="colors" id="colors">
                 <img src="./images/blue.png" alt="blue" onclick="AddCard('#27C7D4')"/>
                 <img src="./images/rouge.png" alt="rouge" onclick="AddCard('#D22727')"/>
@@ -27,9 +29,16 @@
     </div>
 
     <div class="notes" id="notes">
-        <div class="divsearch" >
-            <img src="./images/search.png" alt="orange" id="searchicon"/>
-            <input class="search" id="search" type="text" placeholder="search" onkeyup="search(value)" />
+       
+        <div class="contentsearchsignout">
+            <div class="divsearch" >
+                <img src="./images/search.png" alt="orange" id="searchicon"/>
+                <input class="search" id="search" type="text" placeholder="search" onkeyup="search(value)" />
+            </div>
+            <div class="divsignout"  id="sign-out">
+                <img src="./images/sign-out3.png" alt="sign-out"/>
+                <p class="sign-outparagraph">sign out  </p>
+            </div>
         </div>
 
         <div class="deletediv" id="deletediv">
@@ -41,11 +50,11 @@
 
 
 
+    <script  src="index.js"></script>
+
+    <script type="module"  src="BDdeconnection.js"></script>
 
 
 
-
-
-    <script src="index.js"></script>
 </body>
 </html>

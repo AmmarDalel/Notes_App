@@ -2,8 +2,8 @@
 
 // Importer les modules Firebase Auth
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
-import { getDatabase , ref , set , get , child } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-database.js";
-import { getAuth, signInWithEmailAndPassword , createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
+import { getDatabase  } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-database.js";
+import { getAuth, signInWithEmailAndPassword , createUserWithEmailAndPassword , sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-auth.js";
 // Importer les modules Firebase Auth
 
 
@@ -27,19 +27,16 @@ const db=getDatabase(app) ;
 //--- login elements 
 let emaillogin=document.getElementById('emaillogin');
 let password_login=document.getElementById('password-login');
-let remember_forget=document.getElementById('remember-forget');
 let loginsubmit=document.getElementById('loginsubmit');
 
-//---- register elements
-let UserName=document.getElementById('UserName') ;
-let emailregister=document.getElementById('emailregister');
-let passwordregister=document.getElementById('passwordregister');
-let submitregister=document.getElementById('submitregister') ;
 
+let forget_password=document.getElementById('forget_password')
 
 // Initialiser Firebase Auth
 const auth = getAuth();
 
+
+// enregistrer un utilisateur 
 submitregister.addEventListener('click', function(e) {
     e.preventDefault();
 
@@ -61,10 +58,7 @@ submitregister.addEventListener('click', function(e) {
     });
 });
 
-
-
-
-
+  
 
 // Écouter l'événement click sur le bouton de connexion
 loginsubmit.addEventListener('click', function () {
@@ -75,11 +69,41 @@ loginsubmit.addEventListener('click', function () {
     signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             // Connexion réussie, rediriger vers la page de profil par exemple
+              // Stockez les informations de la session utilisateur
+            sessionStorage.setItem("userSession", "true");
+            localStorage.setItem("userSession", "true");
+            auth.onAuthStateChanged(user => {
+              if (user) {
+                  // Utilisateur connecté
+                  const userId = user.uid;
+            sessionStorage.setItem("typeofuserid", typeof user.uid);
+            sessionStorage.setItem("userid", userId);
+          }});
+
             window.location.href = "NotesPage.html";
-            console.log('correct login') ;
+
+            console.log('correct login '+sessionStorage+' '+localStorage) ;
         })
         .catch((error) => {
             console.error('Erreur lors de la connexion :', error.message);
         });
 });
+
+
+
+// Fonction pour envoyer l'email de réinitialisation
+forget_password.addEventListener('click', function() {
+    const email = emaillogin.value;
+  
+    sendPasswordResetEmail(auth, email).then(() => {
+      // Email envoyé
+      alert("Un email de réinitialisation a été envoyé à " + email);
+    }).catch((error) => {
+      // Une erreur est survenue
+      console.error("Erreur lors de l'envoi de l'email de réinitialisation:", error);
+      alert("Erreur : " + error.message);
+    });
+  });
+
+
 

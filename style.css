@@ -7,9 +7,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 70vh;
-   
-    /* Ajoutez d'autres propriétés CSS si nécessaire */
-}
+   }
 
 #bloc-note-image-container{
     padding: 10px 20px;
@@ -328,3 +326,81 @@ h1{
 }
 
 
+
+/* version mobile */
+
+@media (max-width : 1024px){
+
+    body {
+        min-height: 75vh; 
+    }
+
+    .maincontent{
+        display: block;
+        justify-content: space-between;
+        
+    }
+    
+    #bloc-note-image-container{
+       
+        margin-top: 25%;
+        margin-left: 5%;
+    }
+
+    .presentation{
+        margin-left: 45%;
+        margin-top: -47%;
+    }
+
+    #name-app{
+        font-size: 120px;
+    
+    }
+
+    #p2{
+     font-size: 50px;
+    
+    }
+}
+
+@media (max-width : 834px){
+    .maincontent{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    body {
+        min-height: 110vh; 
+    }
+
+    #bloc-note-image-container{
+       
+        margin-top: 45%;
+        margin-left: 5%;
+    }
+
+    #bloc-note-image-container img{
+        width: 300px;
+    }
+
+    .presentation{
+        margin-left: 47%;
+        margin-top: -47%;
+    }
+
+    #name-app{
+        font-size: 100px;
+    
+    }
+
+    #p2{
+     font-size: 35px;
+    
+    }
+
+    .button-container{
+        margin-left: 50%;
+       
+    }
+    
+}

@@ -76,6 +76,16 @@ img{
     padding: 1px 10px;
     text-align: center;
 }
+.contentsearchsignout{
+    display: flex;
+    justify-content: space-between;
+}
+
+.divsearch{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .search{
     margin-top: 30px;
@@ -88,12 +98,30 @@ img{
     cursor: pointer;
     padding-left: 50px;
     font-size: 20px;
+    
 }
 
 #searchicon {
     margin-top: 43px;
     margin-left: 10px;
     position: absolute;
+}
+
+.divsignout{
+    display: flex;
+    flex-direction: column;
+  align-items: center;
+}
+#sign-out{
+    margin-right: 10px;
+    
+}
+.sign-outparagraph{
+    margin-top: -3px;
+    margin-right: 5px;
+    font-size: 15px;
+    text-align: center;
+    color: #677adb;
 }
 
 .notescontent{
@@ -161,4 +189,12 @@ textarea:focus {
 
 #deleteAll:hover{
     background-color: #c7d0ff;
+}
+
+
+
+/* version mobile */
+
+@media (max-width : 1024px){
+
 }

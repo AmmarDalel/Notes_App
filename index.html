@@ -5,24 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon"href="./images/logo.png">
+
+
 </head>
 <body>
  
 
+  <div class="maincontent">
     <div id="bloc-note-image-container">
        
-       <img src="./images/bloc-note.png" alt="bloc-note" class="grow-shrink"/>
-     
-    </div>
-
-    <div class="presentation">
-        <p id="name-app">MemoMind</p>
-        <p id="p2">Where every idea finds its place.</p>
-    </div>
+        <img src="./images/bloc-note.png" alt="bloc-note" class="grow-shrink"/>
+      
+     </div>
+ 
+     <div class="presentation">
+         <p id="name-app">MemoMind</p>
+         <p id="p2">Where every idea finds its place.</p>
+     </div>
+  </div>
 
     <div class="button-container">
-        <button id="login" onclick="login()">Login</button>
-        <button  id="signin" onclick="registerf()">Signin</button>
+        <button id="login" onclick="login()">Sig nin</button>
+        <button  id="signin" onclick="registerf()">Sign up</button>
     </div>
 
     <div class="wrapper">
@@ -47,10 +52,8 @@
                     <label>Password</label>
                 </div>
                 <div class="remember-forget">
-                   <label >
-                     <input type="checkbox" id="remember-forget">Remember me
-                   </label>
-                   <a href="#">Forget Password ?</a>
+                  
+                   <a href="#"  id="forget_password">Forget Password ?</a>
                 </div>
                 <button type="submit" class="btn" id="loginsubmit">Login</button>
                 <div class="login-register">
@@ -84,9 +87,7 @@
                     <label>Password</label>
                 </div>
                 <div class="remember-forget">
-                   <label >
-                     <input type="checkbox" >I agree to the terms & conditions
-                   </label>
+                  
                   
                 </div>
                 <button type="submit" class="btn" id="submitregister">Register</button>
