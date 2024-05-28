@@ -404,3 +404,41 @@ h1{
     }
     
 }
+
+@media (max-width : 713px){
+ 
+  
+    body {
+        background-repeat: repeat;
+        
+       }
+
+       #bloc-note-image-container{
+       
+        margin-top: 20%;
+        margin-bottom: 35%;
+    }
+
+    .presentation{
+        margin-left: 32%;
+    }
+
+    .button-container{
+        margin-left: 40%;
+       
+
+    }
+}
+
+@media (max-width : 480px){
+    body {
+        background-repeat: repeat;
+        
+       }
+
+       #bloc-note-image-container{
+       
+        margin-top: auto;
+        margin-bottom: 25%;
+    }
+}
